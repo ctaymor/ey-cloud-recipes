@@ -72,6 +72,7 @@
 
 #include_recipe "varnish_frontend"
 
+require_recipe "whenever"
 #uncomment to set environment variables in passenger or unicorn
 # Set environment variables as specified in cookbooks/env_vars/attributes/env_vars.rb
 #include_recipe "env_vars"
@@ -79,6 +80,8 @@
 
 #uncomment to include the mysql_replication_check recipe
 #include_recipe "mysql_replication_check"
+
+include_recipe "whenever"
 
 #uncomment to include the mysql_administrative_tools recipe
 # additional configuration of this recipe is required
